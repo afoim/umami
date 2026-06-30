@@ -52,6 +52,18 @@
     "format": "biome format --write .",
     "check": "biome check --write"
   },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@prisma/client",
+      "@prisma/engines",
+      "prisma",
+      "esbuild",
+      "sharp"
+    ],
+    "ignoredBuiltDependencies": [
+      "cypress"
+    ]
+  },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx,json,css}": [
       "biome check --write --no-errors-on-unmatched --files-ignore-unknown=true"
